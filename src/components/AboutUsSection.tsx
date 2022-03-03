@@ -2,11 +2,12 @@ import {
   Flex,
   HStack,
   Stack,
-  Text,
   Box,
   LinkProps as ChakraLinkProps,
+  Text,
+  Center,
 } from "@chakra-ui/react";
-import landingImage from "../core/assets/landingImage.svg";
+import roundedImage from "../core/assets/roundedImage.svg";
 import Image from "next/image";
 
 interface AboutUsSectionProps extends ChakraLinkProps {
@@ -20,30 +21,43 @@ export default function AboutUsSection({ id, color }: AboutUsSectionProps) {
       <Flex
         w='100%'
         maxWidth={1480}
-        h='150vh'
+        h='100vh'
         mx='auto'
-        px='6'
         bg={color}
         borderBottomColor='gray.500'
         borderBottomWidth='thin'
         id={id}
       >
-        <HStack ml='5vw'>
-          <Box mr='1px' mt='100'>
-            <Image height={360} src={landingImage} alt='App Image' />
+        <HStack ml='10vw' mt='10vh'>
+          <Box
+            border='1px solid white'
+            borderRadius='50%'
+            width={400}
+            height={400}
+          >
+            <Image
+              src={roundedImage}
+              alt='App Image'
+              width={400}
+              height={400}
+            />
           </Box>
-          <Image src={landingImage} alt='App Image' />
         </HStack>
-        <Stack ml='81px' mt='35vh'>
-          <Box w='600px'>
+        <Stack ml='162px' mt='35vh'>
+          <Box w='600px' pb='6'>
             <Text
               fontFamily='Rajdhani'
               fontSize='40px'
               fontWeight={600}
               lineHeight='51px'
             >
-              Algo aqui sobre o app <br /> em 2 linhas - gratuito
+              Encontre os melhores <br /> tatuadores COPY
             </Text>
+            <Center
+              width='270px'
+              height='6px'
+              borderBottom='4px solid #00DAE9'
+            ></Center>
           </Box>
           <Box w='600px'>
             <Text
@@ -53,22 +67,9 @@ export default function AboutUsSection({ id, color }: AboutUsSectionProps) {
               color='#E0E0E0'
               lineHeight='180%'
             >
-              Breve descrição sobre as funcionalidades do app, tanto para o
-              cliente final, quanto para o tatuador. Conexões, conheça,
-              descubra, algo em até três <br /> linhas de texto, para não ficar
-              muito forte.
-            </Text>
-          </Box>
-          <Box w='600px'>
-            <Text
-              fontFamily='Open Sans'
-              fontSize='16px'
-              fontWeight={400}
-              color='#E0E0E0'
-              lineHeight='180%'
-              mt='25px'
-            >
-              Comece agora
+              Oferecemos a solução completa para que você fique conectado <br />
+              com seus clientes a qualquer momento, desde a publicação do <br />
+              app até até a publicação.
             </Text>
           </Box>
         </Stack>
