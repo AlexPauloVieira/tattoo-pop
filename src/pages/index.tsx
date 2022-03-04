@@ -8,6 +8,7 @@ export default function Home() {
       <Header />
       <LandingSection id='home' color='gray.900' />
       <AboutUsSection id='about-us' color='gray.900' />
+      <AboutUsSection id='testimonials' color='gray.500' />
     </>
   );
 }
