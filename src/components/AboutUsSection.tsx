@@ -6,6 +6,7 @@ import {
   LinkProps as ChakraLinkProps,
   Text,
   Center,
+  Button,
 } from "@chakra-ui/react";
 import roundedImage from "../core/assets/roundedImage.svg";
 import Image from "next/image";
@@ -51,7 +52,7 @@ export default function AboutUsSection({ id, color }: AboutUsSectionProps) {
               fontWeight={600}
               lineHeight='51px'
             >
-              Encontre os melhores <br /> tatuadores COPY
+              Encontre os melhores <br /> tatuadores
             </Text>
             <Center
               width='270px'
@@ -71,6 +72,25 @@ export default function AboutUsSection({ id, color }: AboutUsSectionProps) {
               com seus clientes a qualquer momento, desde a publicação do <br />
               app até até a publicação.
             </Text>
+            <Button
+              display='flex'
+              flexDirection='row'
+              alignItems='center'
+              py='12px'
+              px='64px'
+              mt='32px'
+              position='absolute'
+              width='230px'
+              height='45px'
+              bg='gray.900'
+              color='#00DAE9'
+              border='1px solid #00DAE9'
+              boxSizing='border-box'
+              borderRadius='4px'
+              _hover={{ bg: "#2d426d", color: "#fff", borderColor: "#2d426d" }}
+            >
+              <Text>Começar agora</Text>
+            </Button>
           </Box>
         </Stack>
       </Flex>
